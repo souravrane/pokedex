@@ -10,10 +10,10 @@ function Pokecard({ id, name, type, exp }) {
     return (
         <div>
             <div className="Pokecard">
-                <h1>{name}</h1>
+                <h2 className="Pokecard-title">{name}</h2>
                 <img src={imageSrc} alt={name} />
-                <div>Type: {type}</div>
-                <div>Exp: {exp}</div>
+                <div className="Pokecard-data">Type: {type}</div>
+                <div className="Pokecard-data">Exp: {exp}</div>
             </div>
         </div>
     );

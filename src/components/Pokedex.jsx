@@ -6,9 +6,16 @@ function Pokedex({ pokemon }) {
     return (
         <div className="Pokedex">
             <h1>Pokedex!</h1>
-            {pokemon.map((p) => (
-                <Pokecard id={p.id} name={p.name} type={p.type} exp={p.exp} />
-            ))}
+            <div className="Pokedex-cards">
+                {pokemon.map((p) => (
+                    <Pokecard
+                        id={p.id}
+                        name={p.name}
+                        type={p.type}
+                        exp={p.base_experience}
+                    />
+                ))}
+            </div>
         </div>
     );
 }
