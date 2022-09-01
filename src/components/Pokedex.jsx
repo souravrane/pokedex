@@ -2,10 +2,18 @@ import React from "react";
 import Pokecard from "./Pokecard";
 import "./Pokedex.css";
 
-function Pokedex({ pokemon }) {
+function Pokedex({ pokemon, exp, isWinner }) {
+    let title;
+    if (isWinner) {
+        title = <h1 className="Pokedex-winner">Winner!</h1>;
+    } else {
+        title = <h1 className="Pokedex-looser">Loser!</h1>;
+    }
+
     return (
         <div className="Pokedex">
-            <h1>Pokedex!</h1>
+            {title}
+            <h4>Total experience : {exp}</h4>
             <div className="Pokedex-cards">
                 {pokemon.map((p) => (
                     <Pokecard
